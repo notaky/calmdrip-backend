@@ -253,13 +253,14 @@ After
   - アプリ内の既存レシピを自分のレシピとしてコピー
 - 抽出補助タイマー
   - レシピの工程と経過時間を連動
+  - 次の工程の開始を電子音で合図
 
 MVPでは会員登録を後回しにし、「レシピを選択して、迷わず抽出を開始できる」という中心的な体験の検証を優先する。
 
 ### 本リリースで作る機能
 
 - ユーザー登録 / 認証
-- 抽出タイマー音声案内
+- 抽出タイマー音声案内（読み上げ）
 - 抽出評価
 - レシピ検索
 - レシピお気に入り
@@ -403,3 +404,6 @@ Vite + React
 
 - App Router での Rails API との通信<br>
 Pages RouterでNext.jsからRails APIへ通信した経験はあるが、今回は App Router を利用するため、データ取得方法が違う点に不安がある。
+
+### 画面遷移図
+Figma：<https://www.figma.com/design/eG3jPB7zjjhdWUHDH02sjS/CalmDrip.app?node-id=1-2&t=XFEi3LRCm03w0wd7-1>
