@@ -409,4 +409,4 @@ Pages RouterでNext.jsからRails APIへ通信した経験はあるが、今回�
 Figma：<https://www.figma.com/design/eG3jPB7zjjhdWUHDH02sjS/CalmDrip.app?node-id=1-2&t=XFEi3LRCm03w0wd7-1>
 
 ### ER図
-https://cdn.phototourl.com/anon/2026-11-22-3774ef9a-47c6-42b2-99f2-6a5abb3f4776.png
+画像 ：<https://github.com/user-attachments/assets/6f59a5ca-3c49-43db-b506-0e56f3d2de94>
