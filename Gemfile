@@ -25,11 +25,11 @@ gem "rails", "~> 8.1.3", ">= 8.1.3.1"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  # # セキュリティ脆弱性の静的解析
-  # gem "brakeman", require: false
+  # セキュリティ脆弱性の静的解析
+  gem "brakeman", require: false
 
-  # # gemのセキュリティ脆弱性のチェック
-  # gem "bundler-audit", require: false
+  # gemのセキュリティ脆弱性のチェック
+  gem "bundler-audit", require: false
 
   # デバッグ
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
