@@ -32,7 +32,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.10
+          ruby-version: 3.4.13
           bundler-cache: true
 
       - name: Database setup
@@ -54,7 +54,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.10
+          ruby-version: 3.4.13
           bundler-cache: true
 
       - name: Run rubocop
@@ -70,7 +70,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.10
+          ruby-version: 3.4.13
           bundler-cache: true
 
       - name: Run brakeman
