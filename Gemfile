@@ -49,6 +49,9 @@ group :development, :test do
   gem "rubocop-faker"
   gem "rubocop-rails"
   gem "rubocop-rspec"
+
+  # テストカバレッジ測定
+  gem 'simplecov', require: false
 end
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
