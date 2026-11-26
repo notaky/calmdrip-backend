@@ -1,3 +1,25 @@
+require 'simplecov'
+
+SimpleCov.start 'rails' do
+  # 分岐カバレッジも計測する
+  enable_coverage :branch
+
+  # テストされていないファイルも 0% としてレポートに含める
+  track_files '{app,lib}/**/*.rb'
+
+  # 除外設定
+  add_filter '/spec/'
+  add_filter '/config/'
+  add_filter '/db/'
+  add_filter '/vendor/'
+
+  # # グループ
+  # add_group 'Models', 'app/models'
+
+  # # 最低カバレッジ基準（CIでのガード用途）
+  # minimum_coverage line: 80, branch: 70
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'

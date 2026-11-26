@@ -31,3 +31,5 @@
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+# テストカバレッジ測定レポートファイルを除外
+/coverage
