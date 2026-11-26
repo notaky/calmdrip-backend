@@ -45,10 +45,10 @@ group :development, :test do
   # # RSpec を導入する
   # gem "rspec-rails"
 
-  # # Rubocop を導入する
-  # gem "rubocop-faker"
-  # gem "rubocop-rails"
-  # gem "rubocop-rspec"
+  # Rubocop を導入する
+  gem "rubocop-faker"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
 end
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
