@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby "3.4.10"
+ruby "3.4.13"
 
 # railsの起動時間を短縮する（標準gem）
 gem "bootsnap", require: false
@@ -69,6 +69,3 @@ end
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem "rack-cors"
