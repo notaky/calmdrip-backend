@@ -1,0 +1,28 @@
+ARG RUBY_VERSION=3.4.10
+FROM docker.io/library/ruby:$RUBY_VERSION
+
+# アプリケーションディレクトリを作成
+WORKDIR /api
+
+# 必要なパッケージをインストール
+RUN apt-get update -qq && \
+  apt-get install --no-install-recommends -y \
+    build-essential \
+    libpq-dev \
+    postgresql-client \
+    libvips \
+    vim && \
+  rm -rf /var/lib/apt/lists/*
+
+# Gemfile と Gemfile.lock をコピーし、依存関係をインストール
+COPY Gemfile /api/Gemfile
+COPY Gemfile.lock /api/Gemfile.lock
+RUN bundle install
+
+# アプリケーションの全ファイルをコンテナ内にコピー
+COPY . /api
+
+# entrypoint.shを配置し実行権限を与える
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
