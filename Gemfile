@@ -15,8 +15,8 @@ gem "pg", "~> 1.6"
 # pumaサーバーを使えるようにする（標準gem）
 gem "puma", ">= 5.0"
 
-# # CORS設定を管理する
-# gem "rack-cors"
+# CORS設定を管理する
+gem "rack-cors"
 
 # rails本体（標準gem）
 gem "rails", "~> 8.1.3", ">= 8.1.3.1"
