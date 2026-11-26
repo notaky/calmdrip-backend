@@ -113,6 +113,9 @@ GEM
     google-protobuf (4.36.2-aarch64-linux-gnu)
       bigdecimal
       rake (~> 13.3)
+    google-protobuf (4.36.2-x86_64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     io-console (0.9.5)
@@ -152,18 +155,22 @@ GEM
     nio4r (2.7.5)
     nokogiri (1.19.7-aarch64-linux-gnu)
       racc (~> 1.4)
+    nokogiri (1.19.7-x86_64-linux-gnu)
+      racc (~> 1.4)
     ostruct (0.6.3)
     parallel (2.3.0)
     parser (3.3.14.0)
       ast (~> 2.4.1)
       racc
     pg (1.7.0-aarch64-linux)
+    pg (1.7.0-x86_64-linux)
     pg_query (6.2.5)
       google-protobuf (>= 4.34.0)
     pp (0.6.4)
       prettyprint
     prettyprint (0.2.1)
     prism (2.1.0-aarch64-linux-gnu)
+    prism (2.1.0-x86_64-linux-gnu)
     prosopite (2.5.0)
       activerecord (>= 6.1)
       railties (>= 6.1)
@@ -293,6 +300,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
