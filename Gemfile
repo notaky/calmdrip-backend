@@ -6,8 +6,8 @@ ruby "3.4.13"
 # railsの起動時間を短縮する（標準gem）
 gem "bootsnap", require: false
 
-# # 環境毎に設定を管理する
-# gem "config"
+# 環境毎に設定を管理する
+gem "config"
 
 # Postgresqlに接続する
 gem "pg", "~> 1.6"
