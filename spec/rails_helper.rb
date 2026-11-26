@@ -35,6 +35,23 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
+  # FactoryBotの宣言を省略
+  config.include FactoryBot::Syntax::Methods
+
+  # # ProsopiteでN+1を監視
+  # config.before(:suite) do
+  #   Prosopite.raise = true
+  #   Prosopite.rails_logger = true
+  # end
+
+  # config.before(:each) do
+  #   Prosopite.scan
+  # end
+
+  # config.after(:each) do
+  #   Prosopite.finish
+  # end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
