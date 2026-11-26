@@ -31,19 +31,19 @@ group :development, :test do
   # # gemのセキュリティ脆弱性のチェック
   # gem "bundler-audit", require: false
 
-  # # デバッグできるようにする
-  # gem "debug", platforms: %i[mri windows], require: "debug/prelude"
+  # デバッグ
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude"
 
-  # # テスト用データを作成する
-  # gem "factory_bot_rails"
-  # gem "faker"
+  # テスト用データを作成する
+  gem "factory_bot_rails"
+  gem "faker"
 
   # # N+1クエリの検出
   # gem "pg_query"
   # gem "prosopite"
 
-  # # RSpec を導入する
-  # gem "rspec-rails"
+  # RSpec を導入する
+  gem "rspec-rails"
 
   # Rubocop を導入する
   gem "rubocop-faker"
