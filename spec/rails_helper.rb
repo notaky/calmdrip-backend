@@ -35,22 +35,24 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
+  config.before { |example| Prosopite.scan(example.location) unless example.metadata[:prosopite] == false }
+  config.after { Prosopite.finish }
   # FactoryBotの宣言を省略
   config.include FactoryBot::Syntax::Methods
 
-  # # ProsopiteでN+1を監視
-  # config.before(:suite) do
-  #   Prosopite.raise = true
-  #   Prosopite.rails_logger = true
-  # end
+  # ProsopiteでN+1を監視
+  config.before(:suite) do
+    Prosopite.raise = true
+    Prosopite.rails_logger = true
+  end
 
-  # config.before(:each) do
-  #   Prosopite.scan
-  # end
+  config.before(:each) do
+    Prosopite.scan
+  end
 
-  # config.after(:each) do
-  #   Prosopite.finish
-  # end
+  config.after(:each) do
+    Prosopite.finish
+  end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [

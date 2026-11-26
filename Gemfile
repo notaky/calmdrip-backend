@@ -38,9 +38,9 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
 
-  # # N+1クエリの検出
-  # gem "pg_query"
-  # gem "prosopite"
+  # N+1クエリの検出
+  gem "pg_query"
+  gem "prosopite"
 
   # RSpec を導入する
   gem "rspec-rails"
