@@ -13,9 +13,9 @@ SimpleCov.start 'rails' do
   skip '/db/'
   skip '/vendor/'
 
-  # # グループ
-  add_group 'Controllers', 'app/controllers'
-  add_group 'Models', 'app/models'
+  # グループ
+  group 'Controllers', 'app/controllers'
+  group 'Models', 'app/models'
 
   # # 最低カバレッジ基準（CIでのガード用途）
   # minimum_coverage line: 80, branch: 70
