@@ -5,16 +5,17 @@ SimpleCov.start 'rails' do
   enable_coverage :branch
 
   # テストされていないファイルも 0% としてレポートに含める
-  track_files '{app,lib}/**/*.rb'
+  cover '{app,lib}/**/*.rb'
 
   # 除外設定
-  add_filter '/spec/'
-  add_filter '/config/'
-  add_filter '/db/'
-  add_filter '/vendor/'
+  skip '/spec/'
+  skip '/config/'
+  skip '/db/'
+  skip '/vendor/'
 
   # # グループ
-  # add_group 'Models', 'app/models'
+  add_group 'Controllers', 'app/controllers'
+  add_group 'Models', 'app/models'
 
   # # 最低カバレッジ基準（CIでのガード用途）
   # minimum_coverage line: 80, branch: 70
