@@ -70,4 +70,14 @@ Rails.application.configure do
 
   # アクセス許可リストに追加
   config.hosts << "host.docker.internal"
+
+  # Prosopite設定
+  config.after_initialize do
+    # N+1が発生したときにログ出力とブラウザのConsoleに通知
+    Prosopite.rails_logger = true
+    Prosopite.prosopite_logger = true
+    Prosopite.stderr_logger = true
+    # N+1が発生したときに例外を発生させる
+    Prosopite.raise = true
+  end
 end
