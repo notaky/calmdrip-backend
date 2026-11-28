@@ -7,9 +7,9 @@ RUN apt-get update && apt-get install -y curl vim sudo lsof
 RUN rm -f /etc/nginx/conf.d/*
 
 # Nginxの設定ファイルをコンテナにコピー
-ADD nginx.conf /etc/nginx/api.conf
+ADD nginx.conf /etc/nginx/myapp.conf
 
 # ビルド完了後にNginxを起動
-CMD /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/api.conf
+CMD /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/myapp.conf
 
 EXPOSE 80
