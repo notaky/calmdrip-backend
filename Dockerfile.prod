@@ -1,0 +1,32 @@
+FROM --platform=linux/x86_64 ruby:3.4.13
+
+ENV LANG=C.UTF-8 \
+    TZ=Asia/Tokyo \
+    RAILS_ENV=production
+
+# pg gem のビルドに必要なライブラリと PostgreSQL クライアント
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+      libpq-dev \
+      postgresql-client && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /myapp
+
+COPY Gemfile Gemfile.lock ./
+
+RUN bundle install
+
+COPY . .
+
+RUN mkdir -p tmp/sockets tmp/pids
+
+VOLUME /myapp/public
+VOLUME /myapp/tmp
+
+COPY entrypoint.prod.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.prod.sh
+
+ENTRYPOINT ["entrypoint.prod.sh"]
+
+EXPOSE 3000
